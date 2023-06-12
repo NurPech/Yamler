@@ -1,0 +1,128 @@
+# Database configuration.
+database:
+  # The database JDBC address. Should replace dbname with the database name.
+  address: jdbc:mysql://localhost/dbname
+  # The table to use within given database
+  table: RushPlugin
+  # Database username, if applicable. Leave empty if unneeded
+  username: ''
+  # Database password, if applicable. Leave empty if unneeded
+  password: ''
+# Gameplay settings
+gameplay:
+  # Delay in minutes during which players cannot break beds.
+  bedBreakDelay: 60
+  # Amount of players each team needs before starting the game.
+  playersPerTeam: 4
+  # Amount of teams in the game.
+  # Can be 2, 3, 4 or 6
+  teams: 2
+  # Delay in seconds before starting the game
+  gameStartDelay: 10
+  # Delay in seconds for forced respawn after death.
+  respawnDelay: 10
+# Score system settings
+scoring:
+  # Points earned when winning the game
+  win: 4
+  # Points lost when losing the game
+  lose: 2
+  # Points earned when killing an enemy
+  kill: 2
+  # Points lost when getting killed
+  death: 1
+# Economy settings
+economy:
+  # Money earned when winning the game
+  win: 4
+  # Money lost when losing the game
+  lose: 2
+  # Points earned when killing an enemy
+  kill: 2
+  # Points lost when getting killed
+  death: 1
+# Game Setup
+setup:
+  # Game world
+  world: world
+  # Server to move players to after game over
+  hubServer: hub
+  # Position of the lobby
+  lobbyPosition:
+    x: 0
+    y: 50
+    z: 0
+  # Position of each spawns
+  spawnPosition:
+  - x: 0
+    y: 50
+    z: 0
+  - x: 0
+    y: 50
+    z: 0
+  - x: 0
+    y: 50
+    z: 0
+  - x: 0
+    y: 50
+    z: 0
+  - x: 0
+    y: 50
+    z: 0
+  - x: 0
+    y: 50
+    z: 0
+  - x: 0
+    y: 50
+    z: 0
+  - x: 0
+    y: 50
+    z: 0
+database_address: jdbc:mysql://localhost/dbname
+database_table: RushPlugin
+database_username: ''
+database_password: ''
+gameplay_bedBreakDelay: 60
+gameplay_playersPerTeam: 4
+gameplay_teams: 2
+gameplay_gameStartDelay: 10
+gameplay_respawnDelay: 10
+scoring_win: 4
+scoring_lose: 2
+scoring_kill: 2
+scoring_death: 1
+economy_win: 4
+economy_lose: 2
+economy_kill: 2
+economy_death: 1
+setup_world: world
+setup_hubServer: hub
+setup_lobbyPosition:
+  x: 0
+  y: 50
+  z: 0
+setup_spawnPosition:
+- x: 0
+  y: 50
+  z: 0
+- x: 0
+  y: 50
+  z: 0
+- x: 0
+  y: 50
+  z: 0
+- x: 0
+  y: 50
+  z: 0
+- x: 0
+  y: 50
+  z: 0
+- x: 0
+  y: 50
+  z: 0
+- x: 0
+  y: 50
+  z: 0
+- x: 0
+  y: 50
+  z: 0
