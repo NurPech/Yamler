@@ -26,7 +26,7 @@ public class Block implements Converter {
 
         Converter locationConverter = converter.getConverter(org.bukkit.Location.class);
         Map<String, Object> saveMap = new HashMap<>();
-        saveMap.put("id", block.getType() + ((block.getData() > 0) ? ":" + block.getData() : ""));
+        saveMap.put("id", block.getType());
         saveMap.put("location", locationConverter.toConfig(org.bukkit.Location.class, block.getLocation(), null));
 
         return saveMap;
@@ -40,12 +40,7 @@ public class Block implements Converter {
         Location location = new org.bukkit.Location(Bukkit.getWorld((String) locationMap.get("world")), (Double) locationMap.get("x"), (Double) locationMap.get("y"), (Double) locationMap.get("z"));
         org.bukkit.block.Block block = location.getBlock();
 
-        String[] temp = ((String) blockMap.get("id")).split(":");
-        block.setType(Material.valueOf(temp[0]));
-
-        if (temp.length == 2) {
-            block.setData(Byte.valueOf(temp[1]));
-        }
+        block.setType((Material) blockMap.get("id"));
 
         return block;
     }
